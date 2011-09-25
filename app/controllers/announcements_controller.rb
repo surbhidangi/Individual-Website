@@ -3,7 +3,7 @@ class AnnouncementsController < ApplicationController
   # GET /announcements.xml
     #before_filter :get_announcements, :except => [:show]
   def index
-    @announcements = Announcement.search(params[:search])
+    @announcements = Announcement.search(params[:search]).order(params[:sort]).paginate(:per_page =>3, :page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
