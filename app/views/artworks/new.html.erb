@@ -1,0 +1,23 @@
+<h1>New artwork</h1>
+ <%= form_for(@artwork) do |f| %>
+    <div class="field">
+    <%= f.label :art_title %><br />
+    <%= f.text_field :art_title %>
+  </div>
+  <div class="field">
+    <%= f.label :image_url %><br />
+    <%= f.text_field :image_url %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br />
+    <%= f.text_field :comment %>
+  </div>
+  <div class="field">
+    <%= f.label :collection_id %><br />
+    <%= f.collection_select(:collection_id, @collections, :id, :collection_title, {:include_blank =>true}) %>
+  </div><div class="actions">
+    <%= f.submit %>
+  </div><% end %>
+<%#= render 'form' %>
+
+<%= link_to 'Back', artworks_path %>

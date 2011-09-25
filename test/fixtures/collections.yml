@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  collection_title: MyString
+  inspiration: MyString
+  artist: MyString
+
+two:
+  collection_title: MyString
+  inspiration: MyString
+  artist: MyString

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TestNew</title>
+  <%= stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css", "style_old" %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "style_old" , ":defaults"%>
+  <%#= stylesheet_link_tag :all %>
+  <%#= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+<%# unless current_announcements.empty? %>
+    <div id="announcement">
+     <%# for announcement in Announcement.find(:all) %>
+     <% for announcement in get_announcements_helper %>
+     <p><%=h announcement.message %> | <%=h announcement.starts_at %> | <%=h announcement.ends_at %></p>
+     <% end %>
+
+</div>
+<%# end %>
+<div id = "container">
+<%= yield %>
+</div>
+</body>
+</html>

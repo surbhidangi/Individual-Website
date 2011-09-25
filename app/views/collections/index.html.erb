@@ -1,0 +1,27 @@
+<h1>Listing collections</h1>
+
+<table>
+  <tr>
+    <th>Collection title</th>
+    <th>Inspiration</th>
+    <th>Artist</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @collections.each do |collection| %>
+  <tr>
+    <td><%= collection.collection_title %></td>
+    <td><%= collection.inspiration %></td>
+    <td><%= collection.artist %></td>
+    <td><%= link_to 'Show', collection %></td>
+    <td><%= link_to 'Edit', edit_collection_path(collection) %></td>
+    <td><%= link_to 'Destroy', collection, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Collection', new_collection_path %>

@@ -1,0 +1,105 @@
+<html>
+<!--<body>
+
+<h2>Image 1</h2>
+<img border="0" src="/images/1.jpg" alt="Pulpit rock" width="304" height="228" />
+
+<h2>Image 1</h2>
+<img border="0" src="/images/2.jpg" alt="Pulpit rock" width="304" height="228" />
+
+<h2>Image 1</h2>
+<img border="0" src="/images/3.jpg" alt="Pulpit rock" width="304" height="228" />
+
+</body> -->
+
+<head>
+<style type="text/css">
+a:link {color:#A72000;}    /* unvisited link */
+a:visited {color:#0000FF;} /* visited link */
+a:hover {color:#0033cc;}   /* mouse over link */
+a:active {color:#0000FF;}  /* selected link */
+h1 {text-align: center;
+    text-transform: lowercase;}
+h2 {text-align: center;
+    text-transform: lowercase;}
+div.img
+  {
+      margin:2px;
+  border:1px solid #8E8E8E;
+  height:300px;
+  width:400px;
+    display:-moz-box;
+    -moz-box-orient:horizontal;
+    -moz-box-pack:center;
+    -moz-box-align:center;
+
+    padding-left: 125px;
+    padding-right: 125px;
+    padding-bottom: 0px;
+    align: center;
+    text-align:center;
+  }
+div.img img
+  {
+  display:inline;
+  margin:3px;
+  border:1px solid #ffffff;
+  }
+div.img a:hover img
+  {
+  border:1px solid #0000ff;
+  }
+div.desc
+  {
+  text-align:center;
+  font-weight:normal;
+  width:120px;
+  margin:2px;
+  }
+</style>
+</head>
+<body>
+
+</br></br><h1>My Gallery</h1></br></br></br></br></br></br>
+
+
+
+  <!--<a target="_blank" href="klematis_big.htm"> -->
+  <%# if (@artworks.image_url == "/images/child.jpg") %>
+  <%# @artworks.image_url %>
+  <% @artworks = Artwork.all %>
+   <% @artworks.each do |art|   %>
+   <div class="img"><img border="0" src=<%= art.image_url %> width="310" height="228" /></br>
+   <div class="desc"><%= art.comment %></div></div>
+
+
+
+        <%#</div>
+      %>
+   <!--
+  <img border="0" src="/images/child.jpg" width="310" height="228" />
+  <div class="desc"><%#<%= art.comment %></div>
+      <%# end %>
+</div>
+
+<div class="img">
+  <img border="0" src="/images/beach.jpg" width="330" height="250" />
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="img">
+  <img border="0" src="/images/baby.jpg" width="243" height="180" />
+  <div class="desc">Add a description of the image here</div>
+</div>
+<div class="img">
+  <img border="0" src="/images/lion.jpg" width="340" height="228" />
+  <div class="desc">Add a description of the image here</div>
+</div>      -->
+<% end %>
+
+
+</br></br><h2><a href="http://localhost:3000/artworks/">Home</a></h2></br></br>
+
+</body>
+</html>
+
+

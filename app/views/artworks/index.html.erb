@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>my blog</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+         <img border="0" src="/images/img_head.png" alt="Pulpit rock" width="1000" height="300" />  </div>
+			<h1><a href="http://localhost:3000/collections/"> <strong><small>The artist in me&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</small></strong></a></h1>
+			    <p>designs by <a href="http://www.surbhidangi.co.nr/">Surbhi Dangi</a></p>
+		</div>
+        <div id="menu">
+			<ul>
+				<li class="current_page_item"><a href="http://localhost:3000/artworks/">Homepage</a></li>
+				<li><a href="http://www.surbhidangi.co.nr">Blog</a></li>
+				<li><a href="http://localhost:3000/ajax_gallery/">Photos</a></li>
+                <li><a href="http://localhost:3000/ajax_gallery/">Events</a></li>
+				<li><a href="http://www.surbhidangi.co.nr">Contact</a></li>
+			</ul>
+		</div>
+	</div>
+    <div id="page">
+		<div id="content">
+			<div class="post">
+				<h2 class="title"><a href="https://www.facebook.com/myartistspage">Welcome to my gallery  </a></h2>
+				<p class="meta"><span class="date">September 23, 2011</span><span class="posted">Posted by <a href="#">Someone</a></span></p>
+				<div style="clear: both;">&nbsp;</div>
+				<div class="entry">
+					<p>Auguste Rodin, the most famous sculptor of his day, not only appealed to American collectors but also had a profound influence on American artists. This exhibition is the first to examine the scope of this influence on artists such as Malvina Hoffman, Edward Steichen, Georgia O'Keeffe and others.</p>
+					<p>Through October 16, 2011
+This exhibition of 80 illustrated title pages traces the development of the title page from the 16th to 19th centuries. Title page illustrations by such artists as Giovanni Battista Piranesi, Canaletto, Francisco Goya, William Morris, Odilon Redon, and Aubrey Beardsley are featured in this display. </p>
+                  <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="www.facebook.com/myartistspage" data-send="true" data-width="450" data-show-faces="false" data-font="trebuchet ms"></div>
+</div>  </br> </br>
+			</div>
+			<div style="clear: both;">&nbsp;</div>
+		</div>
+		<!-- end #content -->
+		<div id="sidebar">
+			<ul>
+				<li>
+					<!--<div id="search" >
+						<form method="get" action="#">
+							<div>
+								<input type="text" name="s" id="search-text" value="" />
+								<input type="submit" id="search-submit" value="GO" />
+							</div>
+						</form>
+					</div> -->
+					<div style="clear: both;">&nbsp;</div>
+				</li>
+				<li>
+                  <h2>Quick Links</h2>
+					<h2><%= link_to "My gallery", :controller => 'artworks', :action => 'ajax_gallery' %></h2>
+                    <h2><a href="http://localhost:3000/announcements">All Announcements</a></h2>
+				</li>
+              <li>
+					<h2>Philosophy</h2>
+					<p>Loves seeing the ordinary as something that can be extraordinary..</p>
+				</li>
+
+			</ul>
+		</div>
+		<!-- end #sidebar -->
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+	<!-- end #page -->
+</div>
+<div id="footer-content">
+	<div id="footer-bg" class="container">
+		<div id="column1">
+			<h2>Welcome to my website</h2>
+			<p>The California Art Club was established in 1909, by artists, patrons, and visionaries for the sole purpose of capturing the beauty of California’s landscapes in their paintings. The California Historical Society is the only Bay Area venue for this exhibition celebrating the one hundred year legacy of the California Art Club.</p>
+		</div>
+		<div id="column2">
+			<h2>Portfolio</h2>
+			<p>A Century of Landscapes. Presenting an exhibition of artwork by members of the California Art Club celebrating the club’s one hundred year legacy. The California Art Club was established in 1909, by artists, patrons and visionaries for the sole purpose of capturing the beauty of California’s landscapes in their paintings. </p>
+		</div>
+		<div id="column3">
+			<h2>Recommended Links</h2>
+			<ul>
+				<li><a href="http://museum.stanford.edu/">Richard Serra: Sequence</a></li>
+				<li><a href="http://www.californiahistoricalsociety.org/">Dutch and Flemish Masterworks</a></li>
+				<li><a href="http://www.californiahistoricalsociety.org/">Selections from the California Art Club </a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<!--<div id="footer">
+	<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a>.</p>
+</div> -->
+<!-- end #footer -->
+</body>
+</html>
